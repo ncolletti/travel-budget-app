@@ -25,14 +25,12 @@ const feathersClient = feathers()
     },
   });
 
-export default feathersClient;
-
 // Configure an AJAX library (see below) with that client
 app.configure(restClient.axios(axios));
 
 // Connect to the `http://feathers-api.com/` services
-// const users = app.service('users');
-// const boards = app.service('boards');
+const users = app.service('users');
+const boards = app.service('boards');
 
 // Setting up feathers-vuex
 const {
@@ -41,11 +39,11 @@ const {
   feathersClient,
   {
     serverAlias: 'travel-budget-api', // optional for working with multiple APIs (this is the default value)
-    idField: 'id', // Must match the id field in your database table/collection
+    idField: '_id', // Must match the id field in your database table/collection
     whitelist: ['$regex', '$options'],
   },
 );
 
 export {
-  makeAuthPlugin, makeServicePlugin, BaseModel, models, FeathersVuex,
+  makeAuthPlugin, makeServicePlugin, BaseModel, models, FeathersVuex, users, boards,
 };
