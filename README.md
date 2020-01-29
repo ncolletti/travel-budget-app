@@ -9,8 +9,9 @@
 * [x] Install postgres and create db
 * [x] Add vuetify to client
 * [x] Add feathers-vuex to client
-* [ ] Add login to client
-* [ ] Test auth from client to server
+* [x] Add login to client
+* [x] Test auth from client to server
+* [ ] Add logout to client
 
 * [ ] Add trip service to server
 * [ ] User can create/list/view trips on client
@@ -30,7 +31,9 @@
 * [ ] Store should update trips/budget when login/logout
 
 * [ ] Finalize thoughts on db design for trips/lists/activities
-
+* [ ] Build component for boards
+* [ ] Build component for trips
+* [ ] Setup [route guard](https://forum.vuejs.org/t/log-out-programatically-and-navigate-away-from-restricted-route-after-log-out/54259) for boards route
 * [ ] Dockerize Client and Server with Dockercompose
 
 ## Tech

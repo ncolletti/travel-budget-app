@@ -9,7 +9,7 @@
           State is here!
         </h1>
         <p class="subheading font-weight-regular">
-          {{retrieveState}}
+
         </p>
       </v-flex>
 
@@ -34,17 +34,8 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'HelloWorld',
-  computed: {
-    retrieveState() {
-      return this.$store.state.users;
-    },
-  },
   mounted() {
     console.log(this.$store.state.users);
-    console.log(window.localStorage.getItem('feathers-jwt'));
   },
-  // data: () => ({
-
-  // }),
 });
 </script>
