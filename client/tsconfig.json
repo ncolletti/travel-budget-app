@@ -36,7 +36,9 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "tests/**/*.tsx",
+    "src/store/store.auth.js",
+    "src/store/services/users.js",
   ],
   "exclude": [
     "node_modules"

@@ -6,7 +6,8 @@
             dark
             >
     <!-- nav bar goes here-->
-    <router-link to="/login">Login</router-link>
+    <router-link v-if="!isAuthenticated" to="/login">Login</router-link>
+    <router-link v-if="isAuthenticated" to="/logout">Logout</router-link>
   </v-app-bar>
 
   <!-- Sizes your content based upon application components -->
@@ -27,6 +28,8 @@
 <script lang="ts">
 import Vue from 'vue';
 
+import { mapState, mapGetters } from 'vuex';
+
 export default Vue.extend({
   name: 'App',
 
@@ -36,5 +39,10 @@ export default Vue.extend({
   data: () => ({
     //
   }),
+  computed: {
+    ...mapGetters([
+      'isAuthenticated',
+    ]),
+  },
 });
 </script>
