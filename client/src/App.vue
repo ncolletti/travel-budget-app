@@ -1,22 +1,17 @@
 <template>
   <!-- App.vue -->
 <v-app>
-  <v-app-bar app color="grey"
-            dense
-            dark
-            >
-    <!-- nav bar goes here-->
-    <router-link v-if="!isAuthenticated" to="/login">Login</router-link>
-    <router-link v-if="isAuthenticated" to="/logout">Logout</router-link>
-  </v-app-bar>
+
+
+  <header app>
+    <NavBar />
+  </header>
 
   <!-- Sizes your content based upon application components -->
-  <v-content>
+  <v-content transition="slide-x-transition">
     <!-- Provides the application the proper gutter -->
-    <v-container fluid>
-      <!-- If using vue-router -->
       <router-view></router-view>
-    </v-container>
+    <!-- </v-container> -->
   </v-content>
 
   <v-footer app>
@@ -28,21 +23,14 @@
 <script lang="ts">
 import Vue from 'vue';
 
-import { mapState, mapGetters } from 'vuex';
+
+import NavBar from './components/NavBar.vue';
+
 
 export default Vue.extend({
   name: 'App',
-
   components: {
-  },
-
-  data: () => ({
-    //
-  }),
-  computed: {
-    ...mapGetters([
-      'isAuthenticated',
-    ]),
+    NavBar,
   },
 });
 </script>

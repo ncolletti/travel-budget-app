@@ -11,7 +11,8 @@
 * [x] Add feathers-vuex to client
 * [x] Add login to client
 * [x] Test auth from client to server
-* [ ] Add logout to client
+* [x] Add logout to client
+* [x] Handle wrong password auth flow
 
 * [ ] Add trip service to server
 * [ ] User can create/list/view trips on client

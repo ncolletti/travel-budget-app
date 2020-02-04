@@ -29,6 +29,12 @@ export default new Vuex.Store({
     isAuthenticated: state => !!state.accessToken,
   },
   // mutations: {},
-  // actions: {},
+  actions: {
+    logout() {
+      console.log('logging out from state');
+      this.dispatch('auth/logout');
+      window.localStorage.removeItem('feathers-jwt');
+    },
+  },
   plugins: [...servicePlugins, auth],
 });
