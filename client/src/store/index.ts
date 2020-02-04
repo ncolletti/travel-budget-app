@@ -25,15 +25,18 @@ export default new Vuex.Store({
     accessToken: window.localStorage.getItem('feathers-jwt') || null,
   },
   getters: {
-    userById: (state: any, id: number) => state.users.filter((user: any) => user.id === id),
     isAuthenticated: state => !!state.accessToken,
   },
-  // mutations: {},
+  mutations: {
+    LOGOUT(state) {
+      state.accessToken = '';
+    },
+  },
   actions: {
     logout() {
-      console.log('logging out from state');
       this.dispatch('auth/logout');
       window.localStorage.removeItem('feathers-jwt');
+      Vue.set(this.state, 'accessToken', '');
     },
   },
   plugins: [...servicePlugins, auth],
