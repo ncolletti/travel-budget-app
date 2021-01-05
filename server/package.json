@@ -59,7 +59,7 @@
     "@types/sequelize": "^4.28.8",
     "@types/serve-favicon": "^2.5.0",
     "@types/validator": "^10.11.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "mocha": "^6.2.2",
     "nodemon": "^2.0.2",
     "shx": "^0.3.2",
